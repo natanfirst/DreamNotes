@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngIf="showModalText" class="overlay"></div>
+  <div *ngIf="showModalText" class="textarea-content">
+    <label for="title-note">Title</label>
+    <input
+      id="title-note"
+      placeholder="Title"
+      type="text"
+      (input)="onChangeTitle($event)"
+    />
+    <label for="description-note">Description</label>
+    <textarea
+      (input)="onChangeDescription($event)"
+      placeholder="You can write here"
+      type="text"
+      name="description"
+      id="description-note"
+    ></textarea>
+    <div class="flex actions-btns">
+      <button (click)="closeModal()">Cancel</button>
+      <button (click)="addNote()">Save</button>
+    </div>
+  </div>
+
+  <button *ngIf="!showModalText" (click)="onShow()" class="new-note-btn">
+    <img src="../../../assets/icons/pencil.svg" alt="" />
+  </button>
+</div>

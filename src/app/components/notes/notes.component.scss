@@ -1,0 +1,56 @@
+$black-color: #000;
+$transparent: 0.5;
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 50px 20px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  .note-content {
+    background: rgba($black-color, $transparent);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    .heading {
+      width: 100%;
+      display: flex;
+      margin-bottom: 15px;
+      justify-content: space-between;
+      .title,
+      .note-data {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        font-family: "Edu SA Beginner", cursive;
+
+        @media (max-width: 1023px) {
+          font-size: 14px;
+        }
+      }
+    }
+    .note-description {
+      font-size: 18px;
+      color: white;
+      font-family: "Edu SA Beginner", cursive;
+      @media (max-width: 1023px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .no-data-content {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+    font-family: "Edu SA Beginner", cursive;
+    font-size: 20px;
+  }
+}

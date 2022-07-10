@@ -1,0 +1,17 @@
+<div class="container">
+  <div *ngFor="let note of notes" class="note-content">
+    <div class="heading">
+      <p class="title">{{ note.title }}</p>
+      <h4 class="note-data">{{ note.data }}</h4>
+    </div>
+    <div>
+      <p class="note-description">
+        {{ note.description }}
+      </p>
+    </div>
+  </div>
+  <div *ngIf="!notes.length">
+    <h4 class="no-data-content">Please add Notes</h4>
+  </div>
+</div>
+<app-input-modal (addNewNote)="onAddNote($event)"></app-input-modal>
